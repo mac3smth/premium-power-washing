@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Work | Premium Power Washing Glasgow | Gallery</title>
+<meta name="description" content="See the results of our professional power washing services across Glasgow. Before and after photos of driveways, patios and more.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.premiumpowerwashing.com/gallery.html">
+<meta property="og:title" content="Our Work | Premium Power Washing Glasgow">
+<meta property="og:description" content="See the results of our professional power washing services across Glasgow and surrounding areas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.premiumpowerwashing.com/gallery.html">
+<meta property="og:image" content="https://www.premiumpowerwashing.com/updatedlogo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0b1a2e;
+  --navy-deep:#060f1d;
+  --blue:#1a8cff;
+  --blue-light:#4da8da;
+  --blue-glow:#2d7dd2;
+  --white:#ffffff;
+  --gray-light:#f4f7fb;
+  --gray:#b0bec5;
+  --text:#e0e8f0;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Montserrat',sans-serif;color:var(--text);background:var(--navy-deep);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none;color:inherit}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+.btn{display:inline-block;padding:14px 32px;border-radius:50px;font-weight:700;font-size:1rem;text-align:center;transition:all .3s ease;cursor:pointer;border:none;letter-spacing:.5px}
+.btn-primary{background:var(--blue);color:var(--white);box-shadow:0 4px 20px rgba(26,140,255,.35)}
+.btn-primary:hover{background:#0070e0;transform:translateY(-2px);box-shadow:0 6px 25px rgba(26,140,255,.5)}
+.btn-sm{padding:10px 24px;font-size:.9rem}
+
+/* Nav */
+.nav{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(6,15,29,.98);backdrop-filter:blur(10px);border-bottom:1px solid rgba(26,140,255,.15)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;max-width:1200px;margin:0 auto}
+.nav-logo img{height:55px;width:auto}
+.nav-phone{color:var(--blue-light);font-weight:700;font-size:1.05rem;display:flex;align-items:center;gap:8px}
+.nav-phone svg{width:20px;height:20px;fill:var(--blue-light)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:5px}
+.hamburger span{display:block;width:26px;height:3px;background:var(--white);border-radius:2px;transition:all .3s ease}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{color:var(--text);font-weight:500;font-size:.95rem;transition:color .3s}
+.nav-links a:hover{color:var(--blue)}
+@media(max-width:900px){
+  .nav-phone-desktop{display:none}
+  .nav-links{position:fixed;top:0;right:-100%;width:280px;height:100vh;background:var(--navy-deep);flex-direction:column;justify-content:center;gap:30px;transition:right .3s ease;box-shadow:-5px 0 30px rgba(0,0,0,.5)}
+  .nav-links.open{right:0}
+  .nav-links a{font-size:1.2rem}
+  .hamburger{display:flex}
+  .nav-cta-desktop{display:none}
+  .nav-close{position:absolute;top:20px;right:20px;background:none;border:none;color:var(--white);font-size:2rem;cursor:pointer}
+}
+@media(min-width:901px){
+  .nav-phone-mobile{display:none}
+  .nav-close{display:none}
+}
+
+/* Gallery header */
+.gallery-header{padding:140px 20px 60px;text-align:center}
+.back-link{display:inline-flex;align-items:center;gap:6px;color:var(--blue-light);font-weight:600;font-size:.95rem;margin-bottom:30px;transition:color .3s}
+.back-link:hover{color:var(--blue)}
+.back-link svg{width:18px;height:18px;fill:currentColor}
+.gallery-header h1{font-size:2.5rem;font-weight:900;color:var(--white);margin-bottom:15px}
+.gallery-header p{font-size:1.1rem;color:var(--gray);max-width:600px;margin:0 auto}
+
+/* Gallery grid */
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:0 20px 80px;max-width:1200px;margin:0 auto}
+.gallery-item{border-radius:14px;overflow:hidden;border:1px solid rgba(26,140,255,.1);cursor:pointer}
+.gallery-item img{width:100%;height:300px;object-fit:cover;transition:transform .4s ease}
+.gallery-item:hover img{transform:scale(1.05)}
+@media(max-width:900px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:550px){.gallery-grid{grid-template-columns:1fr}.gallery-item img{height:250px}}
+
+/* CTA */
+.gallery-cta{text-align:center;padding:0 20px 80px}
+
+/* Footer */
+.footer{background:var(--navy-deep);border-top:1px solid rgba(26,140,255,.1);padding:60px 0 30px}
+.footer-inner{display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-brand img{height:60px;margin-bottom:15px}
+.footer-brand p{color:var(--gray);font-size:.9rem;line-height:1.6}
+.footer-links h4,.footer-contact h4{font-size:1rem;font-weight:700;color:var(--white);margin-bottom:15px}
+.footer-links a{display:block;color:var(--gray);font-size:.9rem;margin-bottom:8px;transition:color .3s}
+.footer-links a:hover{color:var(--blue)}
+.footer-contact a{display:flex;align-items:center;gap:8px;color:var(--gray);font-size:.9rem;margin-bottom:10px;transition:color .3s}
+.footer-contact a:hover{color:var(--blue)}
+.footer-contact svg{width:18px;height:18px;fill:var(--blue);flex-shrink:0}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.05);padding-top:25px;text-align:center}
+.footer-bottom p{color:var(--gray);font-size:.85rem}
+.footer-bottom .small-text{font-size:.8rem;margin-top:8px;color:rgba(176,190,197,.6)}
+@media(max-width:700px){
+  .footer-inner{grid-template-columns:1fr;text-align:center}
+  .footer-brand img{margin:0 auto 15px}
+  .footer-contact a{justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Premium Power Washing Home">
+      <img src="updatedlogo.png" alt="Premium Power Washing Glasgow logo" width="55" height="55">
+    </a>
+    <a href="tel:+447743646945" class="nav-phone nav-phone-desktop" aria-label="Call us">
+      <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.72 11.72 0 003.66.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.27a1 1 0 011 1 11.72 11.72 0 00.59 3.66 1 1 0 01-.24 1.01l-2-2.88z"/></svg>
+      +44 7743 646945
+    </a>
+    <div class="nav-links" id="navLinks">
+      <button class="nav-close" id="navClose" aria-label="Close menu">&times;</button>
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#packages">Packages</a>
+      <a href="index.html#areas">Areas</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="tel:+447743646945" class="nav-phone nav-phone-mobile">+44 7743 646945</a>
+    </div>
+    <a href="index.html#contact" class="btn btn-primary btn-sm nav-cta-desktop">Get Free Quote</a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Gallery Header -->
+<section class="gallery-header">
+  <div class="container">
+    <a href="index.html" class="back-link">
+      <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+      Back to Home
+    </a>
+    <h1>Our Work</h1>
+    <p>Professional power washing results across Glasgow and surrounding areas.</p>
+  </div>
+</section>
+
+<!-- Gallery Grid -->
+<div class="gallery-grid">
+  <div class="gallery-item">
+    <img src="before1.png" alt="Before and after driveway power washing in Glasgow — block paving restoration" loading="lazy" width="800" height="300">
+  </div>
+  <div class="gallery-item">
+    <img src="before2.png" alt="Before and after driveway cleaning in Paisley — moss and grime removal" loading="lazy" width="800" height="300">
+  </div>
+  <div class="gallery-item">
+    <img src="before3.png" alt="Before and after patio power washing in East Kilbride — block paving cleaned" loading="lazy" width="800" height="300">
+  </div>
+  <div class="gallery-item">
+    <img src="before4.png" alt="Before and after driveway power washing in Hamilton — complete transformation" loading="lazy" width="800" height="300">
+  </div>
+  <div class="gallery-item">
+    <img src="before5.png" alt="Before and after power washing in Motherwell — professional exterior cleaning" loading="lazy" width="800" height="300">
+  </div>
+  <div class="gallery-item">
+    <img src="before6.png" alt="Before and after power washing in Stirling — driveway and patio cleaning" loading="lazy" width="800" height="300">
+  </div>
+  <div class="gallery-item">
+    <img src="before7.png" alt="Before and after power washing in Rutherglen — surface restoration results" loading="lazy" width="800" height="300">
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="gallery-cta">
+  <a href="index.html#contact" class="btn btn-primary">Get a Free Quote</a>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="updatedlogo.png" alt="Premium Power Washing Glasgow logo" width="60" height="60" loading="lazy">
+        <p>Professional power washing services across Glasgow, Paisley, Hamilton, Stirling and surrounding areas. Fully insured with professional grade equipment.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#packages">Packages</a>
+        <a href="index.html#areas">Areas We Cover</a>
+        <a href="index.html#contact">Get a Quote</a>
+        <a href="index.html#faq">FAQs</a>
+      </div>
+      <div class="footer-contact">
+        <h4>Get in Touch</h4>
+        <a href="tel:+447743646945">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.72 11.72 0 003.66.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.27a1 1 0 011 1 11.72 11.72 0 00.59 3.66 1 1 0 01-.24 1.01l-2-2.88z"/></svg>
+          +44 7743 646945
+        </a>
+        <a href="mailto:info@premiumpowerwashing.com">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          info@premiumpowerwashing.com
+        </a>
+        <a href="https://www.instagram.com/premium_power_washing" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24"><path d="M7.8 2h8.4A5.8 5.8 0 0122 7.8v8.4a5.8 5.8 0 01-5.8 5.8H7.8A5.8 5.8 0 012 16.2V7.8A5.8 5.8 0 017.8 2zm-.2 2A3.6 3.6 0 004 7.6v8.8A3.6 3.6 0 007.6 20h8.8a3.6 3.6 0 003.6-3.6V7.6A3.6 3.6 0 0016.4 4H7.6zm9.65 1.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/></svg>
+          @premium_power_washing
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Premium Power Washing. All rights reserved.</p>
+      <p class="small-text">Professional power washing services across Glasgow, Paisley, Hamilton, Stirling and surrounding areas.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var hamburger=document.getElementById('hamburger');
+  var navLinks=document.getElementById('navLinks');
+  var navClose=document.getElementById('navClose');
+  hamburger.addEventListener('click',function(){navLinks.classList.add('open')});
+  navClose.addEventListener('click',function(){navLinks.classList.remove('open')});
+  navLinks.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){navLinks.classList.remove('open')})});
+})();
+</script>
+</body>
+</html>
