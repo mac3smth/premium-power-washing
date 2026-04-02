@@ -875,6 +875,18 @@ a{text-decoration:none;color:inherit}
   btn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
 })();
 
+// Convert 07 phone numbers to +44 format before submit
+(function(){
+  var form=document.querySelector('.contact-form');
+  if(form){form.addEventListener('submit',function(){
+    var phone=document.getElementById('phone');
+    if(phone&&phone.value){
+      var v=phone.value.replace(/\s/g,'');
+      if(v.indexOf('07')===0){phone.value='+44'+v.substring(1)}
+    }
+  })}
+})();
+
 // Nav background on scroll
 (function(){
   var nav=document.querySelector('.nav');
