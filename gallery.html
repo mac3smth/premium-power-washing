@@ -81,16 +81,16 @@ a{text-decoration:none;color:inherit}
 /* Before & After grid */
 .ba-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:25px;padding:0 20px 20px;max-width:1200px;margin:0 auto}
 .ba-pair{border-radius:16px;overflow:hidden;border:1px solid rgba(26,140,255,.12);background:rgba(255,255,255,.02)}
-.ba-images{display:grid;grid-template-columns:1fr 1fr}
-.ba-images img{width:100%;height:250px;object-fit:cover}
-.ba-info{padding:12px 16px;display:flex;justify-content:space-between;align-items:center}
-.ba-info span{font-weight:700;font-size:.9rem;color:var(--white)}
-.ba-tags{display:flex;gap:6px}
-.ba-tag{font-size:.75rem;font-weight:600;padding:3px 10px;border-radius:50px}
+.ba-layout{display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch}
+.ba-left,.ba-right{overflow:hidden}
+.ba-left img,.ba-right img{width:100%;height:100%;min-height:250px;object-fit:cover}
+.ba-center{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:15px 12px;text-align:center;background:rgba(255,255,255,.03);min-width:120px;gap:10px}
+.ba-center span{font-weight:700;font-size:.85rem;color:var(--white);line-height:1.3}
+.ba-tag{font-size:.7rem;font-weight:700;padding:4px 12px;border-radius:50px;letter-spacing:.5px}
 .ba-tag.before{background:rgba(255,80,80,.15);color:#ff6b6b}
 .ba-tag.after{background:rgba(26,140,255,.15);color:var(--blue-light)}
 @media(max-width:900px){.ba-grid{grid-template-columns:1fr}}
-@media(max-width:500px){.ba-images img{height:180px}}
+@media(max-width:500px){.ba-left img,.ba-right img{min-height:180px}.ba-center{min-width:90px;padding:10px 8px}.ba-center span{font-size:.75rem}}
 
 /* Finished projects grid */
 .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:0 20px 60px;max-width:1200px;margin:0 auto}
@@ -174,121 +174,91 @@ a{text-decoration:none;color:inherit}
 <div class="ba-grid">
   <!-- Pair 1: Large driveway -->
   <div class="ba-pair">
-    <div class="ba-images">
-      <img src="IMG_3568.JPG" alt="Before driveway power washing in Glasgow - dirty block paving" loading="lazy">
-      <img src="IMG_3569.JPG" alt="After driveway power washing in Glasgow - clean block paving" loading="lazy">
-    </div>
-    <div class="ba-info">
-      <span>Driveway — Block Paving</span>
-      <div class="ba-tags"><span class="ba-tag before">Before</span><span class="ba-tag after">After</span></div>
+    <div class="ba-layout">
+      <div class="ba-left"><img src="IMG_3568.JPG" alt="Before driveway power washing in Glasgow - dirty block paving" loading="lazy"></div>
+      <div class="ba-center"><span class="ba-tag before">Before</span><span>Driveway<br>Block Paving</span><span class="ba-tag after">After</span></div>
+      <div class="ba-right"><img src="IMG_3569.JPG" alt="After driveway power washing in Glasgow - clean block paving" loading="lazy"></div>
     </div>
   </div>
 
   <!-- Pair 2: Patio slabs -->
   <div class="ba-pair">
-    <div class="ba-images">
-      <img src="IMG_3562.JPG" alt="Before patio cleaning in Glasgow - mossy slabs" loading="lazy">
-      <img src="IMG_3563.JPG" alt="After patio cleaning in Glasgow - clean slabs" loading="lazy">
-    </div>
-    <div class="ba-info">
-      <span>Patio — Slab Cleaning</span>
-      <div class="ba-tags"><span class="ba-tag before">Before</span><span class="ba-tag after">After</span></div>
+    <div class="ba-layout">
+      <div class="ba-left"><img src="IMG_3562.JPG" alt="Before patio cleaning in Glasgow - mossy slabs" loading="lazy"></div>
+      <div class="ba-center"><span class="ba-tag before">Before</span><span>Patio<br>Slab Cleaning</span><span class="ba-tag after">After</span></div>
+      <div class="ba-right"><img src="IMG_3563.JPG" alt="After patio cleaning in Glasgow - clean slabs" loading="lazy"></div>
     </div>
   </div>
 
   <!-- Pair 3: Patio slabs with fence -->
   <div class="ba-pair">
-    <div class="ba-images">
-      <img src="IMG_3564.JPG" alt="Before patio power washing in Paisley - mossy stone slabs" loading="lazy">
-      <img src="IMG_3566.JPG" alt="After patio power washing in Paisley - restored stone patio" loading="lazy">
-    </div>
-    <div class="ba-info">
-      <span>Patio — Stone Restoration</span>
-      <div class="ba-tags"><span class="ba-tag before">Before</span><span class="ba-tag after">After</span></div>
+    <div class="ba-layout">
+      <div class="ba-left"><img src="IMG_3564.JPG" alt="Before patio power washing in Paisley - mossy stone slabs" loading="lazy"></div>
+      <div class="ba-center"><span class="ba-tag before">Before</span><span>Patio<br>Stone Restoration</span><span class="ba-tag after">After</span></div>
+      <div class="ba-right"><img src="IMG_3566.JPG" alt="After patio power washing in Paisley - restored stone patio" loading="lazy"></div>
     </div>
   </div>
 
   <!-- Pair 4: Artificial grass -->
   <div class="ba-pair">
-    <div class="ba-images">
-      <img src="IMG_3555.JPG" alt="Before artificial grass cleaning in Glasgow - algae covered" loading="lazy">
-      <img src="IMG_3556.JPG" alt="After artificial grass cleaning in Glasgow - fresh green lawn" loading="lazy">
-    </div>
-    <div class="ba-info">
-      <span>Artificial Grass — Deep Clean</span>
-      <div class="ba-tags"><span class="ba-tag before">Before</span><span class="ba-tag after">After</span></div>
+    <div class="ba-layout">
+      <div class="ba-left"><img src="IMG_3555.JPG" alt="Before artificial grass cleaning in Glasgow - algae covered" loading="lazy"></div>
+      <div class="ba-center"><span class="ba-tag before">Before</span><span>Artificial Grass<br>Deep Clean</span><span class="ba-tag after">After</span></div>
+      <div class="ba-right"><img src="IMG_3556.JPG" alt="After artificial grass cleaning in Glasgow - fresh green lawn" loading="lazy"></div>
     </div>
   </div>
 
   <!-- Pair 5: Patio tiles -->
   <div class="ba-pair">
-    <div class="ba-images">
-      <img src="IMG_3557.JPG" alt="Before patio tile cleaning in East Kilbride - dirty tiles" loading="lazy">
-      <img src="IMG_3558.JPG" alt="After patio tile cleaning in East Kilbride - clean red tiles" loading="lazy">
-    </div>
-    <div class="ba-info">
-      <span>Patio — Tile Cleaning</span>
-      <div class="ba-tags"><span class="ba-tag before">Before</span><span class="ba-tag after">After</span></div>
+    <div class="ba-layout">
+      <div class="ba-left"><img src="IMG_3557.JPG" alt="Before patio tile cleaning in East Kilbride - dirty tiles" loading="lazy"></div>
+      <div class="ba-center"><span class="ba-tag before">Before</span><span>Patio<br>Tile Cleaning</span><span class="ba-tag after">After</span></div>
+      <div class="ba-right"><img src="IMG_3558.JPG" alt="After patio tile cleaning in East Kilbride - clean red tiles" loading="lazy"></div>
     </div>
   </div>
 
   <!-- Pair 6: Driveway herringbone -->
   <div class="ba-pair">
-    <div class="ba-images">
-      <img src="IMG_3575.JPG" alt="Before driveway cleaning in Hamilton - mossy block paving" loading="lazy">
-      <img src="IMG_3576.JPG" alt="After driveway cleaning in Hamilton - clean herringbone paving" loading="lazy">
-    </div>
-    <div class="ba-info">
-      <span>Driveway — Herringbone Paving</span>
-      <div class="ba-tags"><span class="ba-tag before">Before</span><span class="ba-tag after">After</span></div>
+    <div class="ba-layout">
+      <div class="ba-left"><img src="IMG_3575.JPG" alt="Before driveway cleaning in Hamilton - mossy block paving" loading="lazy"></div>
+      <div class="ba-center"><span class="ba-tag before">Before</span><span>Driveway<br>Herringbone Paving</span><span class="ba-tag after">After</span></div>
+      <div class="ba-right"><img src="IMG_3576.JPG" alt="After driveway cleaning in Hamilton - clean herringbone paving" loading="lazy"></div>
     </div>
   </div>
 
   <!-- Pair 7: Block paving corner -->
   <div class="ba-pair">
-    <div class="ba-images">
-      <img src="IMG_3577.JPG" alt="Before block paving cleaning in Motherwell - moss and grime" loading="lazy">
-      <img src="IMG_3578.JPG" alt="After block paving cleaning in Motherwell - restored paving" loading="lazy">
-    </div>
-    <div class="ba-info">
-      <span>Block Paving — Moss Removal</span>
-      <div class="ba-tags"><span class="ba-tag before">Before</span><span class="ba-tag after">After</span></div>
+    <div class="ba-layout">
+      <div class="ba-left"><img src="IMG_3577.JPG" alt="Before block paving cleaning in Motherwell - moss and grime" loading="lazy"></div>
+      <div class="ba-center"><span class="ba-tag before">Before</span><span>Block Paving<br>Moss Removal</span><span class="ba-tag after">After</span></div>
+      <div class="ba-right"><img src="IMG_3578.JPG" alt="After block paving cleaning in Motherwell - restored paving" loading="lazy"></div>
     </div>
   </div>
 
   <!-- Pair 8: Patio and driveway -->
   <div class="ba-pair">
-    <div class="ba-images">
-      <img src="IMG_3581.JPG" alt="Before patio and driveway cleaning in Stirling - mossy walls and slabs" loading="lazy">
-      <img src="IMG_3582.JPG" alt="After patio and driveway cleaning in Stirling - fully restored" loading="lazy">
-    </div>
-    <div class="ba-info">
-      <span>Driveway — Full Restoration</span>
-      <div class="ba-tags"><span class="ba-tag before">Before</span><span class="ba-tag after">After</span></div>
+    <div class="ba-layout">
+      <div class="ba-left"><img src="IMG_3581.JPG" alt="Before patio and driveway cleaning in Stirling - mossy walls and slabs" loading="lazy"></div>
+      <div class="ba-center"><span class="ba-tag before">Before</span><span>Driveway<br>Full Restoration</span><span class="ba-tag after">After</span></div>
+      <div class="ba-right"><img src="IMG_3582.JPG" alt="After patio and driveway cleaning in Stirling - fully restored" loading="lazy"></div>
     </div>
   </div>
 
   <!-- Pair 9: Driveway with worker -->
   <div class="ba-pair">
-    <div class="ba-images">
-      <img src="IMG_3559.JPG" alt="Before driveway power washing in Rutherglen - dirty paving" loading="lazy">
-      <img src="IMG_3560.JPG" alt="After driveway power washing in Rutherglen - clean block paving" loading="lazy">
-    </div>
-    <div class="ba-info">
-      <span>Driveway — Deep Clean</span>
-      <div class="ba-tags"><span class="ba-tag before">Before</span><span class="ba-tag after">After</span></div>
+    <div class="ba-layout">
+      <div class="ba-left"><img src="IMG_3559.JPG" alt="Before driveway power washing in Rutherglen - dirty paving" loading="lazy"></div>
+      <div class="ba-center"><span class="ba-tag before">Before</span><span>Driveway<br>Deep Clean</span><span class="ba-tag after">After</span></div>
+      <div class="ba-right"><img src="IMG_3560.JPG" alt="After driveway power washing in Rutherglen - clean block paving" loading="lazy"></div>
     </div>
   </div>
 
   <!-- Pair 10: Walkway -->
   <div class="ba-pair">
-    <div class="ba-images">
-      <img src="IMG_3579.JPG" alt="Before walkway cleaning in Cambuslang - stained path" loading="lazy">
-      <img src="IMG_3580.JPG" alt="After walkway cleaning in Cambuslang - clean path with garden" loading="lazy">
-    </div>
-    <div class="ba-info">
-      <span>Walkway — Path Cleaning</span>
-      <div class="ba-tags"><span class="ba-tag before">Before</span><span class="ba-tag after">After</span></div>
+    <div class="ba-layout">
+      <div class="ba-left"><img src="IMG_3579.JPG" alt="Before walkway cleaning in Cambuslang - stained path" loading="lazy"></div>
+      <div class="ba-center"><span class="ba-tag before">Before</span><span>Walkway<br>Path Cleaning</span><span class="ba-tag after">After</span></div>
+      <div class="ba-right"><img src="IMG_3580.JPG" alt="After walkway cleaning in Cambuslang - clean path with garden" loading="lazy"></div>
     </div>
   </div>
 </div>
