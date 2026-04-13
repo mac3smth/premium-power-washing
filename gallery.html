@@ -6,12 +6,12 @@
 <title>Our Work | Premium Power Washing Glasgow | Gallery</title>
 <meta name="description" content="See the results of our professional power washing services across Glasgow. Before and after photos of driveways, patios and more.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.premiumpowerwashing.com/gallery.html">
+<link rel="canonical" href="https://www.premiumpowerwashing.co.uk/gallery.html">
 <meta property="og:title" content="Our Work | Premium Power Washing Glasgow">
 <meta property="og:description" content="See the results of our professional power washing services across Glasgow and surrounding areas.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://www.premiumpowerwashing.com/gallery.html">
-<meta property="og:image" content="https://www.premiumpowerwashing.com/updatedlogo.png">
+<meta property="og:url" content="https://www.premiumpowerwashing.co.uk/gallery.html">
+<meta property="og:image" content="https://www.premiumpowerwashing.co.uk/updatedlogo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -41,7 +41,9 @@ a{text-decoration:none;color:inherit}
 /* Nav */
 .nav{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(6,15,29,.98);backdrop-filter:blur(10px);border-bottom:1px solid rgba(26,140,255,.15)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;max-width:1200px;margin:0 auto}
+.nav-logo{display:flex;align-items:center;gap:10px}
 .nav-logo img{height:55px;width:auto}
+.nav-logo span{color:var(--white);font-weight:700;font-size:1.2rem;text-align:center;line-height:1.3}
 .nav-phone{color:var(--blue-light);font-weight:700;font-size:1.05rem;display:flex;align-items:center;gap:8px}
 .nav-phone svg{width:20px;height:20px;fill:var(--blue-light)}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:5px}
@@ -64,16 +66,35 @@ a{text-decoration:none;color:inherit}
 }
 
 /* Gallery header */
-.gallery-header{padding:140px 20px 60px;text-align:center}
+.gallery-header{padding:140px 20px 40px;text-align:center}
 .back-link{display:inline-flex;align-items:center;gap:6px;color:var(--blue-light);font-weight:600;font-size:.95rem;margin-bottom:30px;transition:color .3s}
 .back-link:hover{color:var(--blue)}
 .back-link svg{width:18px;height:18px;fill:currentColor}
 .gallery-header h1{font-size:2.5rem;font-weight:900;color:var(--white);margin-bottom:15px}
 .gallery-header p{font-size:1.1rem;color:var(--gray);max-width:600px;margin:0 auto}
 
-/* Gallery grid */
-.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:0 20px 80px;max-width:1200px;margin:0 auto}
-.gallery-item{border-radius:14px;overflow:hidden;border:1px solid rgba(26,140,255,.1);cursor:pointer}
+/* Section titles */
+.section-heading{text-align:center;padding:40px 20px 30px;max-width:1200px;margin:0 auto}
+.section-heading h2{font-size:1.8rem;font-weight:800;color:var(--white);margin-bottom:8px}
+.section-heading p{font-size:1rem;color:var(--gray)}
+
+/* Before & After grid */
+.ba-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:25px;padding:0 20px 20px;max-width:1200px;margin:0 auto}
+.ba-pair{border-radius:16px;overflow:hidden;border:1px solid rgba(26,140,255,.12);background:rgba(255,255,255,.02)}
+.ba-images{display:grid;grid-template-columns:1fr 1fr}
+.ba-images img{width:100%;height:250px;object-fit:cover}
+.ba-info{padding:12px 16px;display:flex;justify-content:space-between;align-items:center}
+.ba-info span{font-weight:700;font-size:.9rem;color:var(--white)}
+.ba-tags{display:flex;gap:6px}
+.ba-tag{font-size:.75rem;font-weight:600;padding:3px 10px;border-radius:50px}
+.ba-tag.before{background:rgba(255,80,80,.15);color:#ff6b6b}
+.ba-tag.after{background:rgba(26,140,255,.15);color:var(--blue-light)}
+@media(max-width:900px){.ba-grid{grid-template-columns:1fr}}
+@media(max-width:500px){.ba-images img{height:180px}}
+
+/* Finished projects grid */
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:0 20px 60px;max-width:1200px;margin:0 auto}
+.gallery-item{border-radius:14px;overflow:hidden;border:1px solid rgba(26,140,255,.1)}
 .gallery-item img{width:100%;height:300px;object-fit:cover;transition:transform .4s ease}
 .gallery-item:hover img{transform:scale(1.05)}
 @media(max-width:900px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
@@ -110,6 +131,7 @@ a{text-decoration:none;color:inherit}
   <div class="nav-inner">
     <a href="index.html" class="nav-logo" aria-label="Premium Power Washing Home">
       <img src="updatedlogo.png" alt="Premium Power Washing Glasgow logo" width="55" height="55">
+      <span>Premium<br>Power Washing</span>
     </a>
     <a href="tel:+447743646945" class="nav-phone nav-phone-desktop" aria-label="Call us">
       <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.72 11.72 0 003.66.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.27a1 1 0 011 1 11.72 11.72 0 00.59 3.66 1 1 0 01-.24 1.01l-2-2.88z"/></svg>
@@ -143,28 +165,161 @@ a{text-decoration:none;color:inherit}
   </div>
 </section>
 
-<!-- Gallery Grid -->
+<!-- Before & After Section -->
+<div class="section-heading">
+  <h2>Before &amp; After</h2>
+  <p>Real transformations from our power washing projects across Glasgow.</p>
+</div>
+
+<div class="ba-grid">
+  <!-- Pair 1: Large driveway -->
+  <div class="ba-pair">
+    <div class="ba-images">
+      <img src="IMG_3568.JPG" alt="Before driveway power washing in Glasgow - dirty block paving" loading="lazy">
+      <img src="IMG_3569.JPG" alt="After driveway power washing in Glasgow - clean block paving" loading="lazy">
+    </div>
+    <div class="ba-info">
+      <span>Driveway — Block Paving</span>
+      <div class="ba-tags"><span class="ba-tag before">Before</span><span class="ba-tag after">After</span></div>
+    </div>
+  </div>
+
+  <!-- Pair 2: Patio slabs -->
+  <div class="ba-pair">
+    <div class="ba-images">
+      <img src="IMG_3562.JPG" alt="Before patio cleaning in Glasgow - mossy slabs" loading="lazy">
+      <img src="IMG_3563.JPG" alt="After patio cleaning in Glasgow - clean slabs" loading="lazy">
+    </div>
+    <div class="ba-info">
+      <span>Patio — Slab Cleaning</span>
+      <div class="ba-tags"><span class="ba-tag before">Before</span><span class="ba-tag after">After</span></div>
+    </div>
+  </div>
+
+  <!-- Pair 3: Patio slabs with fence -->
+  <div class="ba-pair">
+    <div class="ba-images">
+      <img src="IMG_3564.JPG" alt="Before patio power washing in Paisley - mossy stone slabs" loading="lazy">
+      <img src="IMG_3566.JPG" alt="After patio power washing in Paisley - restored stone patio" loading="lazy">
+    </div>
+    <div class="ba-info">
+      <span>Patio — Stone Restoration</span>
+      <div class="ba-tags"><span class="ba-tag before">Before</span><span class="ba-tag after">After</span></div>
+    </div>
+  </div>
+
+  <!-- Pair 4: Artificial grass -->
+  <div class="ba-pair">
+    <div class="ba-images">
+      <img src="IMG_3555.JPG" alt="Before artificial grass cleaning in Glasgow - algae covered" loading="lazy">
+      <img src="IMG_3556.JPG" alt="After artificial grass cleaning in Glasgow - fresh green lawn" loading="lazy">
+    </div>
+    <div class="ba-info">
+      <span>Artificial Grass — Deep Clean</span>
+      <div class="ba-tags"><span class="ba-tag before">Before</span><span class="ba-tag after">After</span></div>
+    </div>
+  </div>
+
+  <!-- Pair 5: Patio tiles -->
+  <div class="ba-pair">
+    <div class="ba-images">
+      <img src="IMG_3557.JPG" alt="Before patio tile cleaning in East Kilbride - dirty tiles" loading="lazy">
+      <img src="IMG_3558.JPG" alt="After patio tile cleaning in East Kilbride - clean red tiles" loading="lazy">
+    </div>
+    <div class="ba-info">
+      <span>Patio — Tile Cleaning</span>
+      <div class="ba-tags"><span class="ba-tag before">Before</span><span class="ba-tag after">After</span></div>
+    </div>
+  </div>
+
+  <!-- Pair 6: Driveway herringbone -->
+  <div class="ba-pair">
+    <div class="ba-images">
+      <img src="IMG_3575.JPG" alt="Before driveway cleaning in Hamilton - mossy block paving" loading="lazy">
+      <img src="IMG_3576.JPG" alt="After driveway cleaning in Hamilton - clean herringbone paving" loading="lazy">
+    </div>
+    <div class="ba-info">
+      <span>Driveway — Herringbone Paving</span>
+      <div class="ba-tags"><span class="ba-tag before">Before</span><span class="ba-tag after">After</span></div>
+    </div>
+  </div>
+
+  <!-- Pair 7: Block paving corner -->
+  <div class="ba-pair">
+    <div class="ba-images">
+      <img src="IMG_3577.JPG" alt="Before block paving cleaning in Motherwell - moss and grime" loading="lazy">
+      <img src="IMG_3578.JPG" alt="After block paving cleaning in Motherwell - restored paving" loading="lazy">
+    </div>
+    <div class="ba-info">
+      <span>Block Paving — Moss Removal</span>
+      <div class="ba-tags"><span class="ba-tag before">Before</span><span class="ba-tag after">After</span></div>
+    </div>
+  </div>
+
+  <!-- Pair 8: Patio and driveway -->
+  <div class="ba-pair">
+    <div class="ba-images">
+      <img src="IMG_3581.JPG" alt="Before patio and driveway cleaning in Stirling - mossy walls and slabs" loading="lazy">
+      <img src="IMG_3582.JPG" alt="After patio and driveway cleaning in Stirling - fully restored" loading="lazy">
+    </div>
+    <div class="ba-info">
+      <span>Driveway — Full Restoration</span>
+      <div class="ba-tags"><span class="ba-tag before">Before</span><span class="ba-tag after">After</span></div>
+    </div>
+  </div>
+
+  <!-- Pair 9: Driveway with worker -->
+  <div class="ba-pair">
+    <div class="ba-images">
+      <img src="IMG_3559.JPG" alt="Before driveway power washing in Rutherglen - dirty paving" loading="lazy">
+      <img src="IMG_3560.JPG" alt="After driveway power washing in Rutherglen - clean block paving" loading="lazy">
+    </div>
+    <div class="ba-info">
+      <span>Driveway — Deep Clean</span>
+      <div class="ba-tags"><span class="ba-tag before">Before</span><span class="ba-tag after">After</span></div>
+    </div>
+  </div>
+
+  <!-- Pair 10: Walkway -->
+  <div class="ba-pair">
+    <div class="ba-images">
+      <img src="IMG_3579.JPG" alt="Before walkway cleaning in Cambuslang - stained path" loading="lazy">
+      <img src="IMG_3580.JPG" alt="After walkway cleaning in Cambuslang - clean path with garden" loading="lazy">
+    </div>
+    <div class="ba-info">
+      <span>Walkway — Path Cleaning</span>
+      <div class="ba-tags"><span class="ba-tag before">Before</span><span class="ba-tag after">After</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Finished Projects Section -->
+<div class="section-heading">
+  <h2>Finished Projects</h2>
+  <p>Completed work across Glasgow and surrounding areas.</p>
+</div>
+
 <div class="gallery-grid">
   <div class="gallery-item">
-    <img src="before1.png" alt="Before and after driveway power washing in Glasgow — block paving restoration" loading="lazy" width="800" height="300">
+    <img src="IMG_3554.JPG" alt="Finished driveway with grass feature in Glasgow - professional power washing" loading="lazy">
   </div>
   <div class="gallery-item">
-    <img src="before2.png" alt="Before and after driveway cleaning in Paisley — moss and grime removal" loading="lazy" width="800" height="300">
+    <img src="IMG_3553.JPG" alt="Clean block paving driveway in Paisley - power washing results" loading="lazy">
   </div>
   <div class="gallery-item">
-    <img src="before3.png" alt="Before and after patio power washing in East Kilbride — block paving cleaned" loading="lazy" width="800" height="300">
+    <img src="IMG_3565.JPG" alt="Patio half-cleaned showing power washing difference in East Kilbride" loading="lazy">
   </div>
   <div class="gallery-item">
-    <img src="before4.png" alt="Before and after driveway power washing in Hamilton — complete transformation" loading="lazy" width="800" height="300">
+    <img src="IMG_3570.JPG" alt="Decorative patio with planters in Glasgow - professional cleaning" loading="lazy">
   </div>
   <div class="gallery-item">
-    <img src="before5.png" alt="Before and after power washing in Motherwell — professional exterior cleaning" loading="lazy" width="800" height="300">
+    <img src="IMG_3571.JPG" alt="Stone patio with decorative features in Hamilton - power washing results" loading="lazy">
   </div>
   <div class="gallery-item">
-    <img src="before6.png" alt="Before and after power washing in Stirling — driveway and patio cleaning" loading="lazy" width="800" height="300">
+    <img src="IMG_3572.JPG" alt="Premium grey patio with planters in Stirling - professional restoration" loading="lazy">
   </div>
   <div class="gallery-item">
-    <img src="before7.png" alt="Before and after power washing in Rutherglen — surface restoration results" loading="lazy" width="800" height="300">
+    <img src="IMG_3573.JPG" alt="Full garden patio with pergola in Glasgow - premium power washing" loading="lazy">
   </div>
 </div>
 
@@ -195,9 +350,9 @@ a{text-decoration:none;color:inherit}
           <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.72 11.72 0 003.66.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.27a1 1 0 011 1 11.72 11.72 0 00.59 3.66 1 1 0 01-.24 1.01l-2-2.88z"/></svg>
           +44 7743 646945
         </a>
-        <a href="mailto:info@premiumpowerwashing.com">
+        <a href="mailto:premiumpowerwashinguk@gmail.com">
           <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-          info@premiumpowerwashing.com
+          premiumpowerwashinguk@gmail.com
         </a>
         <a href="https://www.instagram.com/premium_power_washing" target="_blank" rel="noopener noreferrer">
           <svg viewBox="0 0 24 24"><path d="M7.8 2h8.4A5.8 5.8 0 0122 7.8v8.4a5.8 5.8 0 01-5.8 5.8H7.8A5.8 5.8 0 012 16.2V7.8A5.8 5.8 0 017.8 2zm-.2 2A3.6 3.6 0 004 7.6v8.8A3.6 3.6 0 007.6 20h8.8a3.6 3.6 0 003.6-3.6V7.6A3.6 3.6 0 0016.4 4H7.6zm9.65 1.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/></svg>
