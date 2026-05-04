@@ -412,6 +412,20 @@ a{text-decoration:none;color:inherit}
 .scroll-top.show{opacity:1;visibility:visible}
 .scroll-top svg{width:22px;height:22px;fill:var(--white)}
 </style>
+
+<!-- Meta Pixel Base Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','35851114097812941');
+fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=35851114097812941&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Base Code -->
 </head>
 <body>
 
@@ -847,16 +861,60 @@ a{text-decoration:none;color:inherit}
   btn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
 })();
 
-// Convert 07 phone numbers to +44 format before submit
+// Meta Pixel: form submit → Lead event (browser + CAPI)
 (function(){
+  function genEventId(){
+    return([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,function(c){
+      return(c^crypto.getRandomValues(new Uint8Array(1))[0]&15>>c/4).toString(16);
+    });
+  }
   var form=document.querySelector('.contact-form');
-  if(form){form.addEventListener('submit',function(){
-    var phone=document.getElementById('phone');
-    if(phone&&phone.value){
-      var v=phone.value.replace(/\s/g,'');
-      if(v.indexOf('07')===0){phone.value='+44'+v.substring(1)}
+  if(!form)return;
+  form.addEventListener('submit',function(){
+    var emailEl=document.getElementById('email');
+    var phoneEl=document.getElementById('phone');
+    var email=emailEl?emailEl.value:'';
+    var phone=phoneEl?phoneEl.value:'';
+
+    // Convert 07 → +44 for Forminit (existing logic)
+    if(phoneEl&&phone){
+      var v=phone.replace(/\s/g,'');
+      if(v.indexOf('07')===0){phoneEl.value='+44'+v.substring(1)}
     }
-  })}
+
+    // Generate shared event_id for browser + CAPI deduplication
+    var eventId=genEventId();
+
+    // 1. Browser-side Lead event
+    if(typeof fbq!=='undefined'){
+      fbq('track','Lead',{},{eventID:eventId});
+    }
+
+    // 2. Server-side CAPI Lead event (keepalive so it survives page navigation)
+    try{
+      fetch('/api/meta-lead',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        keepalive:true,
+        body:JSON.stringify({
+          email:email,
+          phone:phone,
+          eventId:eventId,
+          sourceUrl:window.location.href,
+          userAgent:navigator.userAgent
+        })
+      });
+    }catch(e){}
+  });
+})();
+
+// Meta Pixel: Contact event on phone / WhatsApp clicks
+(function(){
+  document.querySelectorAll('a[href^="tel:"],a[href^="https://wa.me"]').forEach(function(a){
+    a.addEventListener('click',function(){
+      if(typeof fbq!=='undefined'){fbq('track','Contact');}
+    });
+  });
 })();
 
 // Nav background on scroll
