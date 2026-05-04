@@ -62,7 +62,6 @@ module.exports = async function handler(req, res) {
         user_data: userData,
       },
     ],
-    test_event_code: 'TEST78465', // TEMPORARY — remove after verifying in Test Events tab
   };
 
   try {
