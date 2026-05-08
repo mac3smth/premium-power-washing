@@ -72,7 +72,7 @@ module.exports = async function handler(req, res) {
       fetch('https://api.resend.com/emails', {
         method: 'POST', headers,
         body: JSON.stringify({
-          from: 'Premium Power Washing <onboarding@resend.dev>',
+          from: 'Premium Power Washing <quotes@premiumpowerwashing.co.uk>',
           to: ['premiumpowerwashinguk@gmail.com'],
           reply_to: email || undefined,
           subject: `🔔 New Quote — ${name} (${service})`,
@@ -83,7 +83,7 @@ module.exports = async function handler(req, res) {
       email ? fetch('https://api.resend.com/emails', {
         method: 'POST', headers,
         body: JSON.stringify({
-          from: 'Premium Power Washing <onboarding@resend.dev>',
+          from: 'Premium Power Washing <quotes@premiumpowerwashing.co.uk>',
           to: [email],
           subject: `We've received your quote request, ${firstName}!`,
           html: customerHtml,
