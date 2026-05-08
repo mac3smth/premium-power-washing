@@ -896,26 +896,26 @@ src="https://www.facebook.com/tr?id=35851114097812941&ev=PageView&noscript=1"/><
   <div class="container">
     <h2 class="section-title fade-in">Get Your Free Quote Today</h2>
     <p class="section-subtitle fade-in">Fill in the form below and we will get back to you within a few hours. Or feel free to give us a call or WhatsApp us directly on <a href="https://wa.me/447743646945" target="_blank" rel="noopener noreferrer" style="color:var(--blue);font-weight:600">+44 7743 646945</a>.</p>
-    <form class="contact-form fade-in" action="https://forminit.com/f/918eyqsj38z" method="POST">
+    <form class="contact-form fade-in" action="/api/contact" method="POST">
       <div class="form-group">
         <label for="name">Full Name</label>
-        <input type="text" id="name" name="fi-sender-firstName" placeholder="Your full name" required>
+        <input type="text" id="name" name="name" placeholder="Your full name" required>
       </div>
       <div class="form-group">
         <label for="email">Email Address</label>
-        <input type="email" id="email" name="fi-sender-email" placeholder="Your email address" required>
+        <input type="email" id="email" name="email" placeholder="Your email address" required>
       </div>
       <div class="form-group">
         <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="fi-phone-phone" placeholder="Your phone number" required>
+        <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
       </div>
       <div class="form-group">
         <label for="postcode">Postcode</label>
-        <input type="text" id="postcode" name="fi-text-postcode" placeholder="Your postcode">
+        <input type="text" id="postcode" name="postcode" placeholder="Your postcode">
       </div>
       <div class="form-group">
         <label for="service">Service Required</label>
-        <select id="service" name="fi-select-service" required>
+        <select id="service" name="service" required>
           <option value="" disabled selected>Select a service</option>
           <option value="Driveway Cleaning">Driveway Cleaning</option>
           <option value="Patio Cleaning">Patio Cleaning</option>
@@ -930,7 +930,7 @@ src="https://www.facebook.com/tr?id=35851114097812941&ev=PageView&noscript=1"/><
       </div>
       <div class="form-group">
         <label for="details">Additional Details</label>
-        <textarea id="details" name="fi-text-message" placeholder="Tell us about your project — size of area, any specific issues, preferred dates etc."></textarea>
+        <textarea id="details" name="message" placeholder="Tell us about your project — size of area, any specific issues, preferred dates etc."></textarea>
       </div>
       <div class="form-submit">
         <button type="submit" class="btn btn-primary">Get My Free Quote</button>
