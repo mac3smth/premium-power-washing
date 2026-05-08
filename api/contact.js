@@ -57,6 +57,7 @@ module.exports = async function handler(req, res) {
     <p>If you need to reach us urgently, give us a call or WhatsApp:</p>
     <a href="tel:+447743646945" style="background:#1a8cff;color:#fff;padding:12px 22px;border-radius:7px;text-decoration:none;font-weight:700;font-size:14px;display:inline-block;margin-right:10px">📞 +44 7743 646945</a>
     <a href="https://wa.me/447743646945" style="background:#25D366;color:#fff;padding:12px 22px;border-radius:7px;text-decoration:none;font-weight:700;font-size:14px;display:inline-block;margin-top:10px">💬 WhatsApp Us</a>
+    <p style="margin-top:20px;color:#555;font-size:14px">Or you can email us at <a href="mailto:premiumpowerwashinguk@gmail.com" style="color:#1a8cff;text-decoration:none">premiumpowerwashinguk@gmail.com</a></p>
     <p style="margin-top:24px;color:#888;font-size:13px">Premium Power Washing · Glasgow &amp; Surrounding Areas · <a href="https://www.premiumpowerwashing.co.uk" style="color:#1a8cff;text-decoration:none">premiumpowerwashing.co.uk</a></p>
   </div>
 </div>`;
